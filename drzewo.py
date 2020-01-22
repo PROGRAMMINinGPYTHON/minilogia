@@ -5,6 +5,12 @@ a =16
 def p_strona(n):
     for i in range(n):
         cool(1)
+        setheading(0)
+        fd(a)
+        lt(45)
+        fd(4*a*math.sqrt(2))
+        lt(135)
+        fd(1.25*a)
 def l_strona(n):
     for i in range(n):
         cool(1)
@@ -50,6 +56,7 @@ def czastka_b(x):
     fd(2.25*a)
     setheading(-90)
     fd(a)
+    pd()
     for i in range(2):
         pd()
         kwadrat(x)
@@ -80,10 +87,8 @@ def czastka_a(x):
     kwadrat(x)
     fd(1.5*a)
     kwadrat(x)
-    
-speed(0)   
-l_strona(4)
-pu()
-setpos(0,0)
-p_strona(4)
+speed(0) 
+DRZEWO(7)
+  
+
 
