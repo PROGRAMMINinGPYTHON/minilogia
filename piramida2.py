@@ -96,19 +96,22 @@ def czerwony():
 
 def schodek(n):
     for i in range(n):
-
-        if i == 1:
+        if i == 0:
+            print("zielona")
             zielona()
-        if i == n:
-            zolty()
-        if i<1>n:
-            czerwony()
+        else:
+            if i<1 & i>n:
+                print("czerwony")
+                czerwony()
+            else:
+                zolta()
+                print("zolty")
+      
+            
         setheading(-180)
         fd(15)
         lt(90)
         fd(30)
-        print("a")
-
 
 
 
@@ -117,4 +120,4 @@ def schodek(n):
 
 
     
-schodek(1)
+schodek(3)

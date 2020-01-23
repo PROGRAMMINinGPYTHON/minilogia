@@ -106,28 +106,3 @@ def zolta():
     rt(180)
     fd(6)
 
-    
-def schodek(n):
-    for i in range(0,n):
-        if i == 0:
-            zielona()
-        if i == 2:
-            zolta()
-        if i == n-1:
-            czerwona()
-        pu()
-        rt(90)
-        fd(6)
-        rt(90)
-        fd(15)
-        lt(90)
-        fd(30)
-        pd()
-            
-
-
-
-def PIRAMIDA(n):
-    pass
-speed(0)
-schodek(3)
