@@ -99,13 +99,13 @@ def schodek(n):
         if i == 0:
             print("zielona")
             zielona()
-        else:
-            if i<1 & i>n:
+
+        if i>0 & i<n:
                 print("czerwony")
                 czerwony()
-            else:
-                zolta()
-                print("zolty")
+        else:
+           zolta()
+           print("zolty")
       
             
         setheading(-180)
