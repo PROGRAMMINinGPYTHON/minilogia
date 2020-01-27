@@ -51,7 +51,7 @@ def sraka_na_papierze_toaletowym(ile_SRAKI):
     
 def KORONA(ile):
     podarty_papier_toaletowy_na_gorze_rysunku(ile)
-    papier_toaletowy(ile)
+    #papier_toaletowy(ile)
     sraka_na_papierze_toaletowym(ile)
     wystający_kibel(ile)
     spłukanie_kibla(ile)
