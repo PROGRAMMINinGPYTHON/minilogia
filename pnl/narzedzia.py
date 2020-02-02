@@ -10,8 +10,6 @@ class Osoba:
     wiek = None
     __wyplata=4
 
-    def __init__(self):
-        print("wywolales konstruktor bezparametrowy")
 
     def __init__(self, wyplata, adres):
         print("wywolales konstruktor z parametrem wyplata: " + str(wyplata))
@@ -25,7 +23,7 @@ class Osoba:
         print(self.imie, self.nazwisko, "mam oczy: ", oczy)
 
     def opis(x, oczy):
-        return "Wygladam wspaniale, " + x.__prywatnyOpis(oczy) + " zarabiam: " + str(x.__wyplata)
+        return "Wygladam wspaniale, " + x.__prywatnyOpis(oczy) + " zarabiam " + str(x.__wyplata)
 
     def __prywatnyOpis(self, oczy):
         return self.imie + " ." + self.nazwisko + " mam oczy: " + oczy

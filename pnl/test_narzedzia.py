@@ -24,7 +24,7 @@ def test_sumuj4():
 
 
 def test_opis1():
-    michal = Osoba()
+    michal = Osoba(12,"61a")
     michal.imie = "Michal"
-    assert michal.opis("czerwone") == "Wygladam wspaniale, Michal .Kowalski mam oczy: czerwone"
-    assert michal.__prywatnyOpis("czerwone") == "Michal .Kowalski mam oczy: czerwone"
+    assert michal.opis("czerwone") == "Wygladam wspaniale, Michal .Kowalski mam oczy: czerwone zarabiam 12"
+    #assert michal.__prywatnyOpis("czerwone") == "Michal .Kowalski mam oczy: czerwone zarabiam 12"
