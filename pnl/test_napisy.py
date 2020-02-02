@@ -1,6 +1,4 @@
 
-
-
 def test_title():
     txt = "poszla ola do przedszkola"
     assert txt.title() == "Poszla Ola Do Przedszkola"
