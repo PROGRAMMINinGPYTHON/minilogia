@@ -29,15 +29,19 @@ def test_strip():
 def test_split():
     txt ="MINI AUTO"
     assert txt.split() == ['MINI' , 'AUTO']
+    assert "foo;bar;baz".split() == ["foo", "bar", "baz"]
 
 def test_indyk():
     txt = "Hello, welcome to my world."
     x = txt.index("welcome")
     assert txt.index("welcome") == 7
+    assert txt.index("to") == 2
 
         
 def test_NIE():
     txt ="MINI AUTO"
     assert not (txt.split() == ['MINI' , 'AUTO', "foo"])
-            
-test_indyk()
+
+def test_NIE2():
+    txt = "kjsakfdj"
+    assert not (txt.upper()) ==("kjsakfdj")
