@@ -77,18 +77,39 @@ def rząd():
     fd(3*a)
     komplet()
     setheading(0)
+    pu()
+    fd(3*a)
+    rt(60)
+    fd(3*a)
+    komplet()
+
+def dwa_rzędy():
+    rząd()
+    lt(120)
+    fd(3*a)
+    rt(60)
+    fd(3*a)
+    lt(60)
+    fd(3*a)
+    rt(60)
+    fd(3*a)
+    rząd()
+    
+def ostatni_komplet():
+    pu()
+    setpos(-250,200)
     pd()
-##    fd(3*a)
-##    rt(60)
-##    fd(3*a)
-##    rt(60)
-##    fd(3*a)
-##    rt(60)
-##    fd(3*a)
-##    rt(60)
-##    fd(3*a)
-##    rt(60)
-##    fd(3*a)
+    dwa_rzędy()
+    setheading(-120)
+    fd(3*a)
+    rt(60)
+    fd(3*a)
+    komplet()
+
+def wzorek():
+    ostatni_komplet()
+
+    
 speed(0)
-rząd()
+wzorek()
 
