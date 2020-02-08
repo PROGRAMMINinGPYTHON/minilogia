@@ -235,17 +235,16 @@ def czerwone_rządki_wys(jak_w):
         pu()
         fd(a)
         pd()
+        
 def czerwone_rządki_szer(jak_w):
     a = jak_w/11
     for i in range(7):
-        pass
-speed(0)
-rogi(400)
-srodek_(400)
-ramka(400)
-
-
-    
+        kwadrat("red",jak_w)
+        setheading(0)
+        pu()
+        fd(a)
+        pd()
+        
 def rama(jak_w):
     a = jak_w/11
     pu()
@@ -253,6 +252,22 @@ def rama(jak_w):
     pd()
     czerwone_rządki_wys(jak_w)
     pu()
-#    setpos(
+    setpos(4.5*a,-2.5*a)
+    pd()
+    czerwone_rządki_wys(jak_w)
+    lt(90)
+    fd(8*a)
+    rt(90)
+    fd(a)
+    czerwone_rządki_szer(jak_w)
+    pu()
+    setpos(-3.5*a,-4.5*a)
+    pd()
+    czerwone_rządki_szer(jak_w)
+    
 
+speed(0)
+rogi(400)
+srodek_(400)
+ramka(400)
 rama(400)
