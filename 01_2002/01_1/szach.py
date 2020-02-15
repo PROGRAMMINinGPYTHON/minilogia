@@ -36,4 +36,4 @@ def SZACH(n):
             
                     
 
-SZACH(4)
+SZACH(2)
