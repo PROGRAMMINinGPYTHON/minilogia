@@ -1,0 +1,268 @@
+from turtle import *
+import math
+global a
+a = 30/4
+global b
+b = a*math.sqrt(2)
+def ZAMEK():
+    pass
+
+def suwak(ile):
+    d_suwaczek(ile)
+    g_suwak(ile)
+
+
+def yyy():
+    a = 30/4
+    b = a*math.sqrt(2)
+    fillcolor("grey")
+    begin_fill()
+    setheading(135)
+    fd(b)
+    lt(90)
+    fd(b)
+    rt(90)
+    fd(b)
+    lt(90)
+    fd(b)
+    lt(90)
+    fd(b)
+    setheading(-90)
+    fd(2*a)
+    lt(90)
+    fd(2*a)
+    lt(90)
+    fd(2*a)
+    rt(45)
+    fd(b)
+    end_fill()
+
+def przejscie():
+    a = 30/4
+    b = a*math.sqrt(2)
+    pu()
+    setheading(45)
+    fd(b)
+    rt(90)
+    fd(b)
+    lt(90)
+    fd(b)
+    rt(90)
+    fd(b)
+    pd()
+
+def gora():
+    a = 30/4
+    b = a*math.sqrt(2)
+    pu()
+    setheading(135)
+    fd(b)
+    lt(90)
+    fd(b)
+    rt(90)
+    fd(b)
+    pd()
+
+def g_suwak(ile):
+    a = 30/4
+    b = a*math.sqrt(2)
+    lt(90)
+    fd(b)
+    rt(90)
+    for i in range(ile):
+        fillcolor("grey")
+        begin_fill()
+        fd(b)
+        lt(90)
+        fd(b)
+        rt(90)
+        fd(b)
+        rt(90)
+        fd(b)
+        lt(45)
+        fd(2*a)
+        rt(90)
+        fd(2*a)
+        rt(90)
+        fd(2*a)
+        lt(45)
+        fd(b)
+        rt(90)
+        fd(b)
+        end_fill()
+        przejscie_gorne()
+
+def przejscie_gorne():
+    a = 30/4
+    b = a*math.sqrt(2)
+    rt(90)
+    fd(b)
+    lt(90)
+    fd(b)
+    rt(90)
+    fd(b)
+    lt(90)
+    fd(b)
+    rt(90)
+               
+def d_suwaczek(ile):
+    for i in range(ile):
+        yyy()
+        przejscie()
+    gora()
+
+def cosiek ():
+    a = 30/4
+    b=a*math.sqrt(2)
+    rt(180)
+    fd(b)
+    fillcolor("grey")
+    begin_fill()
+    setheading(180)
+    fd(2*a)
+    rt(90)
+    fd(3*a)
+    rt(90)
+    fd(3*a)
+    setheading(-135)
+    fd(2*b)
+    end_fill()
+
+def przejscie_a(ile):
+    a = 30/4
+    b = a*math.sqrt(2)
+    rt(180)
+    fd(b)
+    setheading(0)
+    pu()
+    fd(4*a*ile)
+    pd()
+
+def p_cosiek():
+    a = 30/4
+    b = a*math.sqrt(2)
+    setheading(-135)
+    fd(2*b)
+    setheading(0)
+    fillcolor("grey")
+    begin_fill()
+    fd(3*a)
+    lt(90)
+    fd(3*a)
+    lt(90)
+    fd(2*a)
+    setheading(-45)
+    fd(b)
+    rt(90)
+    fd(2*b)
+    end_fill()
+
+def długie(ile):
+    setheading(0)
+    pu()
+    fd(4.5*a)
+    pd()
+    fillcolor("grey")
+    begin_fill()
+    lt(135)
+    fd(1.5*b)
+    rt(90)
+    fd(1.5*b)
+    rt(45)
+    fd(5*a)
+    rt(45)
+    fd(1.5*b)
+    rt(90)
+    fd(1.5*b)
+    rt(45)
+    fd(5*a)
+    end_fill()
+    pu()
+    fd(4.5*a)
+    fd(ile*4*a)
+
+def tło_d(x):
+    pu()
+    setpos(0,0)
+    setheading(-135)
+    pd()
+    fillcolor("blue")
+    begin_fill()
+    fd(b)
+    lt(45)
+    fd(2*a)
+    rt(90)
+    fd(2*a)
+    rt(90)
+    fd(2*a)
+    lt(90)
+    fd(a)
+    lt(90)
+    fd(4*a)
+    lt(90)
+    fd(4*a*x+a)
+    lt(90)
+    fd(4*a)
+    lt(90)
+    fd(2*a)
+    lt(90)
+    for i in range(x-1):
+        fd(2*a)
+        rt(90)
+        fd(2*a)
+        rt(90)
+        fd(2*a)
+        lt(45)
+        fd(b)
+        lt(90)
+        fd(b)
+        lt(45)
+    end_fill()
+
+
+def tło_g(x):
+    setheading(135)
+    pu()
+    fd(3*b)
+    pd()
+    setheading(90)
+    fillcolor("blue")
+    begin_fill()
+    fd(4*a)
+    rt(90)
+    fd(4*a*x+a)
+    rt(90)
+    fd(4*a)
+    rt(90)
+    fd(a)
+    rt(90)
+    for i in range(x-1):
+        fd(2*a)
+        lt(90)
+        fd(2*a)
+        lt(90)
+        fd(2*a)
+        rt(45)
+        fd(b)
+        rt(90)
+        fd(b)
+        rt(45)
+    fd(2*a)
+    lt(90)
+    fd(2*a)
+    lt(90)
+    fd(2*a)
+    end_fill()
+        
+    
+speed(0)
+suwak(10)
+cosiek()
+przejscie_a(10)
+p_cosiek()
+długie(10)
+tło_d(10)
+tło_g(10)
+
+
+

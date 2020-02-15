@@ -1,0 +1,38 @@
+from turtle import *
+
+def l_pionowe(ilosc,dlug,odl):
+    for i in range(-ilosc,ilosc):
+        rt(90)
+        fd(dlug/2)
+        lt(180)
+        fd(dlug)
+        rt(90)
+        pu()
+        fd(odl)
+        pd()
+        rt(90)
+        fd(dlug/2)
+        lt(90)
+    rt(90)
+    fd(dlug/2)
+def l_poziome(ilosc,dlug,odl):
+    for i in range(-ilosc,ilosc):
+        fd(dlug/2)
+        lt(180)
+        fd(dlug)
+        rt(90)
+        pu()
+        fd(odl)
+        pd()
+        rt(90)
+        fd(dlug/2)
+    fd(dlug/2)
+speed(0)
+pu()
+setpos(0,0)
+pd()
+l_poziome(5,100,10)
+pu()
+setpos(0,0)
+pd()
+l_pionowe(5,100,10)

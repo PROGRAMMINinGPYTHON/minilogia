@@ -1,0 +1,70 @@
+from turtle import *
+def rząd(ile,d):
+    for i in range(ile):
+        pd()
+        setheading(0)
+        circle(d/2)
+        lt(90)
+        pu()
+        fd(d/4)
+        pd()
+        rt(90)
+        circle(d/4)
+        lt(90)
+        pu()
+        fd(d/4*3)
+        rt(90)
+    
+def PLACEK(d):
+    ramka(d)
+    gowna_na_placku(d)
+
+def ramka(d):
+    wys = d*4
+    pu()
+    setheading(-180)
+    fd(wys)
+    rt(90)
+    pd()
+    fd(wys/2)
+    rt(90)
+    fd(wys*2)
+    rt(90)
+    fd(wys)
+    rt(90)
+    fd(2*wys)
+    rt(90)
+    fd(wys/2)
+    rt(180)
+    fd(wys/2)
+    lt(90)
+    fd(d/2)
+
+def gowna_na_placku(d):
+    for i in range(4):
+        rząd(4,d)
+        rt(90)
+        fd(4*d)
+        lt(90)
+        fd(d*2)
+    pu()
+    setpos(0,0)
+    setheading(-180)
+    pu()
+    fd(4*d)
+    lt(90)
+    fd(2*d)
+    lt(90)
+    fd(1.5*d)
+    lt(90)
+    fd(0.5*d)
+    rt(90)
+    pd()
+    for i in range(4):
+        rząd(3,d)
+        rt(90)
+        fd(3*d)
+        lt(90)
+        fd(2*d)
+
+PLACEK(40)
