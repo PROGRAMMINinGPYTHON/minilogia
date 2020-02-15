@@ -29,5 +29,6 @@ def szach(n):
         rt(180)
         fd(400)
         lt(90)
+speed(0)
 szach(4)
 
