@@ -162,4 +162,4 @@ def rząd(ile):
 def pasek(ile):
     pass
 speed(0)
-rząd(3)
+rząd(5)

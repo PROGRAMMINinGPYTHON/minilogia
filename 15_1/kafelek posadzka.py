@@ -64,4 +64,4 @@ def posadzka(ile):
     zolty_kwadrat(ile)
     rząd(ile)
 speed(0)
-posadzka(20)
+posadzka(9)
