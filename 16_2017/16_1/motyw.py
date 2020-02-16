@@ -32,7 +32,6 @@ def kwadrat_xxl():
     end_fill()
 
 def zielone_pole():
-
     setpos(-6.5*a,-6.5*a)
     for j in range(7):
         pu()
@@ -43,6 +42,7 @@ def zielone_pole():
             setheading(0)
             fd(2*a)
 
-
+def mlotki():
+    
 zielone_pole()
             
