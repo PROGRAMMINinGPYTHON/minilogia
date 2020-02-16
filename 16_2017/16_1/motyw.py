@@ -43,6 +43,7 @@ def zielone_pole():
             fd(2*a)
 
 def mlotki():
+    pass
     
 zielone_pole()
             
