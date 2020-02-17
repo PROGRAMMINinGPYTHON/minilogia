@@ -83,4 +83,3 @@ def KAFELKI(x,y):
 
 speed(0)           
 KAFELKI(0,0)
-

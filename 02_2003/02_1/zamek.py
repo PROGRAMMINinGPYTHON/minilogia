@@ -200,5 +200,4 @@ def ZAMEK():
     
 speed(0)    
 ZAMEK()
-ZAMEK()
 
