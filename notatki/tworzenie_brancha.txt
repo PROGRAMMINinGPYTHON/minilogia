@@ -1,0 +1,6 @@
+w przeglądarce tworzymy branch, np jsi_test1, następnie w konsoli:
+git branch -a
+git checkout jsi_test1
+
+
+
