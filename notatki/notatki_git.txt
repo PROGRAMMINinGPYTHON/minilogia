@@ -1,0 +1,20 @@
+------------------- tworzenie brancha -------------------------------
+w przeglądarce tworzymy branch, np jsi_test1, następnie w konsoli:
+git branch -a
+git checkout jsi_test1
+------------------- tworzenie brancha w konsoli ---------------------
+git branch nowy_branch
+git checkout nowy_branch
+# pracujemy na nowym branchu
+git push
+# nie udało się, ale przeczytaj co napisał i wykonaj to
+git push --set-upstream origin nowy_branch
+
+------------------- zapamiętywanie hasła przez gita -----------------
+https://help.github.com/en/github/using-git/caching-your-github-password-in-git
+git config --global credential.helper 'cache --timeout=3600'
+# Set the cache to timeout after 1 hour (setting is in seconds)
+
+
+
+
