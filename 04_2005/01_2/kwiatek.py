@@ -1,7 +1,7 @@
 from turtle import *
 import math
 global a
-a = 10
+a = 20
 global b
 b = a*math.sqrt(2)
 global c
@@ -90,7 +90,6 @@ def gwiazda():
         end_fill()
         lt(45)
         fd(a)
-        fillcolor("orange")
         begin_fill()
         fd(a+b)
         rt(135)
@@ -155,14 +154,92 @@ def duzy_kwadrat_lewa_str():
     end_fill()
 
 def ramka():
-    pass
+    for i in range(8):
+        pu()
+        setpos(0,0)
+        setheading(45*i)
+        fd((c/2)*math.sqrt(2)+(a+b)*math.sqrt(2))
+        pd()
+        rt(135)
+        fillcolor("orange")
+        begin_fill()
+        fd(a+b)
+        lt(45)
+        fd(a+b)
+        lt(90)
+        fd(a)
+        lt(45)
+        fd(b*math.sqrt(2))
+        lt(45)
+        fd(b*math.sqrt(2))
+        end_fill()
+        lt(45)
+        fd(a)
+        lt(90)
+        fd(a+b)
+        fillcolor("yellow")
+        begin_fill()
+        fd((a+b)*math.sqrt(2))
+        lt(135)
+        fd(a+b)
+        lt(90)
+        fd(a+b)
+        end_fill()
+    pu()
+    setpos(0,0)
+def trojkąciki():
+    for i in range(8):
+        pu()
+        setheading(45*i)
+        color("black")
+        fd((c/2)*math.sqrt(2)+(a+b)*math.sqrt(2))
+        fillcolor("white")
+        pd()
+        begin_fill()
+        rt(45)
+        fd(a)
+        lt(135)
+        fd(b)
+        lt(135)
+        fd(a)
+        end_fill()
+        pu()
+        setpos(0,0)
 
-
-    
+def zolte_trojkąty():
+    for i in range(8):
+        pu()
+        setpos(0,0)
+        setheading(45*i)
+        fd((c/2)*math.sqrt(2)+(a+b)*math.sqrt(2))
+        rt(45)
+        fd(a)
+        fillcolor("yellow")
+        begin_fill()
+        pd()
+        fd(b)
+        rt(90)
+        fd(b)
+        rt(135)
+        fd(b*math.sqrt(2))
+        end_fill()
+        fd(b)
+        rt(45)
+        fillcolor("yellow")
+        begin_fill()
+        fd(b)
+        lt(90)
+        fd(b)
+        lt(135)
+        fd(b*math.sqrt(2))
+        end_fill()
+        
 speed(0)    
 srodek()
 białe_trojkąty()    
 gwiazda()
 duzy_kwadrat_prawa_str()
 duzy_kwadrat_lewa_str()
-ramka()
+ramka()    
+trojkąciki()
+zolte_trojkąty()
