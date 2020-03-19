@@ -5,12 +5,18 @@ def DRZEWO(ile,dl):
     liść(ile,dl)
     pieniek(ile,dl)
 
-def gałąź(ile,dl):
+def gałąź_krotka(ile,dl):
+    a = 400/(ile+2)/5
+    rt(360)
+    leaf(ile,dl)
+
+def gałąź_dluga(ile,dl):
     a = 400/(ile+2)/5
     liczba_lisci = randrange(2,dl+1)
     for i in range(liczba_lisci):
         leaf(ile,dl)
         pu()
+        setheading(0)
         fd(6*a)        
 
 def leaf(ile,dl):
@@ -18,6 +24,7 @@ def leaf(ile,dl):
     liść_part_one(ile,dl)
     leaf_part_two(ile,dl)
     leaf_part_three(ile,dl)
+    
 def liść_part_one(ile,dl):
     a = 400/(ile+2)/5
     color("yellow")
@@ -87,6 +94,51 @@ def leaf_part_three(ile,dl):
     end_fill()
 
 def pieniek(ile,dl):
-    pass
+    a = 400/(ile+2)/5
+    pu()
+    fillcolor("black")
+    begin_fill()
+    setpos(-a,-200)
+    pd()
+    setheading(0)
+    fd(2*a)
+    lt(90)
+    fd(3*a)
+    lt(90)
+    fd(2*a)
+    lt(90)
+    fd(3*a)
+    end_fill()
 
-gałąź(2,4)
+def dolna_gałąź(ile,dl):
+    a = 400/(ile+2)/5
+    pu()
+    setpos(-4*a,-200+3*a)
+    pd()
+    setheading(0)
+    fillcolor("black")
+    begin_fill()
+    fd(8*a)
+    lt(90)
+    fd(a)
+    lt(90)
+    fd(8*a)
+    lt(90)
+    fd(a)
+    end_fill()
+
+def piętra(ile,dl):
+    a = 400/(ile+2)/5
+    setpos(3*a,-200+4*a)
+    for i in range(ile+1):
+        if i%2 == 0:
+            setheading(0)
+            gałąź_krotka(ile,dl)
+        else:
+            pu()
+            setpos(3*a,-200+8*a)
+            gałąź_dluga(ile,dl)
+        
+        
+speed(0)   
+piętra(2,7)
