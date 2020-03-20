@@ -20,7 +20,7 @@ def łopata_a():
     fd(20)
     rt(90)
     fd(10)
-    kwadrat("black")
+    kwadrat("green")
 
 def łopata_b():
     pu()
@@ -30,7 +30,7 @@ def łopata_b():
     fd(a)
     rt(90)
     pd()
-    kwadrat("grey")
+    kwadrat("red")
     rt(90)
     fd(a)
     rt(90)
@@ -56,6 +56,7 @@ def WACHLARZ(n):
         pd()
         setheading(180/(n-1)*i)
         łopata()
+        
 speed(0)
-WACHLARZ(11)
+WACHLARZ(4)
 

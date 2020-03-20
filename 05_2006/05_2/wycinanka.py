@@ -97,4 +97,4 @@ def dolny_rządek(ile):
         figura(ile)
         
 speed(0)
-WYCINANKA(9)
+WYCINANKA(16)
