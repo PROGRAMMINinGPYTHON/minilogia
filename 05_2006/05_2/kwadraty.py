@@ -1,4 +1,5 @@
 from turtle import *
+import math
 global a
 a = 40
 
@@ -10,6 +11,9 @@ def powrot():
         fd(a)
         
 def KWADRATY():
+    pu()
+    przejście()
+    pd()
     for i in range(5):
         if i%2 == 0:
             rząd_a()
@@ -74,4 +78,20 @@ def kwadrat():
     end_fill()
 
 speed(0)
+
+def przejście():
+    pu()
+    setpos(0,0)
+    setheading(90)
+    lt(90)
+    fd(a/2)
+    rt(45)
+    fd(a)
+    rt(90)
+    fd(a)
+    lt(135)
+    fd(a)
+    rt(90)
+    fd(a/2)
+
 KWADRATY()
