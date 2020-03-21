@@ -1,0 +1,70 @@
+from turtle import *
+global a
+a = 60
+
+def romb ():
+    fillcolor("red")
+    begin_fill()
+    fd(a)
+    rt(180+108)
+    fd(a)
+    rt(180)
+    rt(72)
+    fd(a)
+    rt(180)
+    lt(72)
+    rt(180)
+    fd(a)
+    end_fill()
+
+def platek():
+    romb()
+    lt(108)
+    fd(a)
+    lt(36)
+    fd(a)
+    rt(180-108)
+    fd(a)
+    rt(180)
+    romb()
+    rt(180+72+72)
+    romb()
+    lt(108)
+    fd(a)
+    rt(180+108)
+    fd(a)
+    rt(180)
+    romb()
+    rt(180)
+    romb()
+    rt(180)
+    fd(a)
+    rt(180+108)
+    fd(a)
+    lt(180+108+180)
+    romb()
+    lt(108)
+    rt(72)
+    romb()
+
+def KWIATEK():
+    setheading(90)
+    for i in range(5):
+        setheading(90+72*i+1)
+        platek()
+        pu()
+        setpos(0,0)
+        pd()
+
+def srodek_kwiatka():
+    pu()
+    setpos(0,0)
+    setheading(90)
+    for i in range(5):
+        pu()
+        setpos(0,0)
+        pd()
+        setheading(90+72*i)
+        romb()
+speed(0)
+KWIATEK()
