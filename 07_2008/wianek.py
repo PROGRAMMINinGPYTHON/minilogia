@@ -1,6 +1,6 @@
 from turtle import *
 global a
-a = 70
+a = 90
 def WIANEK():
     wianek_start()
 
@@ -56,6 +56,23 @@ def wianek_start():
         pu()
         setpos(0,0)
         pd()
+speed(0)
 WIANEK()
+pu()
+setpos(-225,-225)
+setheading(0)
+pd()
+for i in range(4):
+    fd(450)
+    lt(90)
+pu()
+setpos(-200,-200)
+pd()
+setheading(0)
+for i in range(4):
+    fd(400)
+    lt(90)
+setpos(0,0)
+
 
 

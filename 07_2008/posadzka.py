@@ -14,15 +14,6 @@ def POSADZKA(n):
                 kafelek(n,"skyblue")
             else:
                 kafelek(n,"orange")
-
-def rząd(n):
-    a = 400/4/n
-    for i in range(n):
-        if x+i/2 == 0:
-            kol = "skyblue"
-        else:
-            kol = "orange"
-        kafelek(n,kol)
             
 def kafelek_1(n,kol):
     a = 400/n/4
@@ -76,5 +67,5 @@ def kwadrat(n,kol,bok):
     end_fill()
 
 speed(0)
-POSADZKA(15)
+POSADZKA(7)
 
