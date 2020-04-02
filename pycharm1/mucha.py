@@ -12,9 +12,9 @@ def muszka(ile):
 def lewa_str(ile):
     for i in range(ile):
         kształt(2 + i * 2)
-        setheading(180)
-        # rt(90)
-        fd(2*a*i*math.sqrt(2)*i)
+        rt(90)
+        fd(a * math.sqrt(2))
+
 
 def prawa_str():
     pass
@@ -22,11 +22,6 @@ def prawa_str():
 
 def kształt(ile):
     for j in range(2):
-        setheading(180)
-        fd(4*a-(a/2)*math.sqrt(2))
-        lt(90)
-        fd(3*j*a*math.sqrt(2))
-        rt(90)
         for i in range(ile):
             pd()
             diament()
@@ -45,7 +40,7 @@ def kształt(ile):
             rt(135)
             fd(a * math.sqrt(2))
             lt(135)
-        setheading(90)
+        setheading(-90)
         fd(a * math.sqrt(2))
         lt(45)
         fd(a)
@@ -89,10 +84,10 @@ def prawy_diament():
 def kształt_dwa():
     pass
 
-print("dsss")
+
 pu()
 setpos(0,0)
 speed(0)
-setheading(0)
-lewa_str(5)
+setheaidng(0)
+kształt(2)
 done()
