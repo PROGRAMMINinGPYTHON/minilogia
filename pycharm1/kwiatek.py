@@ -53,22 +53,26 @@ def zolte_kolo():
             rt(36)
 
 
-
 def piec_zoltych_kol():
-    for i in range(5):
-        setpos(25,0)
-        setheading(0)
-        fd(25)
+    setheading(0)
+    for i in range(1):
         zolte_kolo()
+        for j in range(5):
+            fd(25)
+            lt(360/5)
+            fd(75)
+            rt(180)
+            fd(25)
+            rt(180)
+            zolte_kolo()
 
 
-
-def wykonczenie():
-    pass
 speed(0)
+setpos(50, 0)
 piec_zoltych_kol()
 zielone()
-setpos(0,0)
+
+
 done()
 
 
