@@ -2,19 +2,35 @@ from turtle import *
 
 
 def motyw(ile):
-    pass
-
-
-def zygzak(ile,heading):
+    kąt_dół = 0
+    kąt_góra = 180
     a = 600 / ((ile + 1) * 22 + 1)
-    duzy_kwadrat_lewy(ile,heading)
+    pu()
+    setpos(450 / 2, -11* a)
+    pd()
+    gora_lub_dol(ile, kąt_góra)
+    zygzak(ile, 90)
+    pu()
+    setheading(90)
+    fd(6 * a)
+    rt(90)
+    fd(4 * a)
+    pd()
+    gora_lub_dol(ile, kąt_dół)
+    pd()
+    zygzak(ile, -90)
+
+
+def zygzak(ile, heading):
+    a = 600 / ((ile + 1) * 22 + 1)
+    duzy_kwadrat_lewy(ile, heading)
     pu()
     lt(90)
     fd(5 * a)
     lt(90)
     fd(17 * a)
     pd()
-    duzy_kwadrat_prawy(ile,heading)
+    duzy_kwadrat_prawy(ile, heading)
 
 
 def wzorek_prawy(ile, kolor, kąt):
@@ -39,16 +55,16 @@ def wzorek_prawy(ile, kolor, kąt):
     rządek(ile, 2, kolor)
 
 
-def duzy_kwadrat_lewy(ile,heading):
+def duzy_kwadrat_lewy(ile, heading):
     a = 600 / ((ile + 1) * 22)
-    wzorek_lewy(ile, "blue", 90+heading)
+    wzorek_lewy(ile, "blue", 90 + heading)
     pu()
     lt(90)
     fd(5 * a)
     rt(90)
     fd(5 * a)
     pd()
-    wzorek_lewy(ile, "red", -90+heading)
+    wzorek_lewy(ile, "red", -90 + heading)
 
 
 def wzorek_lewy(ile, kolor, kąt):
@@ -77,9 +93,9 @@ def wzorek_lewy(ile, kolor, kąt):
     rządek(ile, 1, kolor)
 
 
-def duzy_kwadrat_prawy(ile,heading):
+def duzy_kwadrat_prawy(ile, heading):
     a = 600 / ((ile + 1) * 22 + 1)
-    wzorek_prawy(ile, "blue", 90+heading)
+    wzorek_prawy(ile, "blue", 90 + heading)
     pu()
     rt(90)
     fd(4 * a)
@@ -87,7 +103,7 @@ def duzy_kwadrat_prawy(ile,heading):
     fd(6 * a)
     lt(90)
     pd()
-    wzorek_prawy(ile, "red", -90+heading)
+    wzorek_prawy(ile, "red", -90 + heading)
 
 
 def kwadrat(ile, kol):
@@ -106,46 +122,20 @@ def rządek(ile, jak_dlugi, kol):
         kwadrat(ile, kol)
         fd(a)
 
-def gora_lub_dol(ile,kąt):
+
+def gora_lub_dol(ile, kąt):
     a = 600 / ((ile + 1) * 22 + 1)
     for i in range(ile):
-        zygzak(ile,kąt)
+        zygzak(ile, kąt)
         rt(90)
         pu()
-        fd(4*a)
+        fd(4 * a)
         lt(90)
-        fd(6*a)
+        fd(6 * a)
         lt(90)
         pd()
 
-def ramka(ile):
-    a = 600 / ((ile + 1) * 22 + 1)
-    # pu()
-    # setpos((-450/2)-5*a,0)
-    # pd()
-    # gora_lub_dol(ile,0)
-    pu()
-    setpos(450/2,-22*a)
-    pd()
-    gora_lub_dol(ile,180)
-    zygzak(ile,90)
-    pu()
-    setheading(90)
-    fd(6*a)
-    rt(90)
-    fd(4*a)
-    pd()
-    gora_lub_dol(ile,0)
-    # setpos(450/2,0)
-    pd()
-    # lt(90)
-    # fd(3*a)
-    zygzak(ile,-90)
-
-
-
 speed(0)
-ramka(8)
-print(pos())
-
+motyw(4)
+setpos(0,0)
 done()
