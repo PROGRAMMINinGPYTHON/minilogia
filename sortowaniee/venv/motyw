@@ -120,24 +120,32 @@ def gora_lub_dol(ile,kąt):
 
 def ramka(ile):
     a = 600 / ((ile + 1) * 22 + 1)
-
-    pu()
-    setpos((-450/2)-5*a,0)
-    pd()
-    gora_lub_dol(ile,0)
+    # pu()
+    # setpos((-450/2)-5*a,0)
+    # pd()
+    # gora_lub_dol(ile,0)
     pu()
     setpos(450/2,-22*a)
     pd()
     gora_lub_dol(ile,180)
     zygzak(ile,90)
     pu()
-    setpos(450/2,0)
+    setheading(90)
+    fd(6*a)
+    rt(90)
+    fd(4*a)
     pd()
+    gora_lub_dol(ile,0)
+    # setpos(450/2,0)
+    pd()
+    # lt(90)
+    # fd(3*a)
+    zygzak(ile,-90)
 
 
 
 speed(0)
-ramka(3)
+ramka(8)
 print(pos())
 
 done()
