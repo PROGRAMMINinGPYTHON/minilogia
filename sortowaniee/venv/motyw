@@ -6,7 +6,9 @@ def motyw(ile):
     kąt_góra = 180
     a = 600 / ((ile + 1) * 22 + 1)
     pu()
-    setpos(450 / 2, -11* a)
+    # setpos(450 / 2, -11* a)
+    setpos((ile * 11)*a, -11 * a)
+
     pd()
     gora_lub_dol(ile, kąt_góra)
     zygzak(ile, 90)
@@ -135,7 +137,26 @@ def gora_lub_dol(ile, kąt):
         lt(90)
         pd()
 
+
+def obramowanie():
+    setpos(300, 0)
+    setheading(90)
+    fd(150)
+    lt(90)
+    fd(600)
+    lt(90)
+    fd(300)
+    lt(90)
+    fd(600)
+    lt(90)
+    fd(150)
+
+
 speed(0)
-motyw(4)
-setpos(0,0)
+obramowanie()
+motyw(3)
+
+
+
+
 done()
