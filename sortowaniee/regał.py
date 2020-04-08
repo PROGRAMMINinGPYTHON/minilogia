@@ -5,7 +5,7 @@ global a
 a = 10
 
 
-def regał(szerokość, ile):
+def reg(szerokość, ile):
     pu()
     setpos(-szerokość / 2 + a, -(ile * 7 * a) / 2 + 2 * a)
     pd()
@@ -18,15 +18,15 @@ def regał(szerokość, ile):
         fd(a - 2)
         pd()
     pu()
-    setpos(-szerokość / 2+2, -(ile * 7 * a) / 2)
+    setpos(-szerokość / 2 + 2, -(ile * 7 * a) / 2)
     kwadrat()
-    fd(szerokość - a+1)
+    fd(szerokość - a + 1)
     kwadrat()
-    setpos(szerokość/2+3,(ile*7*a)/2+2*a)
+    setpos(szerokość / 2 + 3, (ile * 7 * a) / 2 + 2 * a)
     setheading(90)
     kwadrat()
     setheading(180)
-    fd(szerokość-a+3)
+    fd(szerokość - a + 3)
     rt(90)
     kwadrat()
 
@@ -42,46 +42,24 @@ def kwadrat():
 
 
 def niebieska():
-    setheading(0)
-    fillcolor("blue")
-    begin_fill()
-    fd(a)
-    lt(90)
-    fd(5 * a)
-    lt(90)
-    fd(a)
-    lt(90)
-    fd(5 * a)
-    end_fill()
+    kolor_ksiązki("blue",5*a)
 
 
 def zielona():
-    fillcolor("green")
-    begin_fill()
-    setheading(0)
-    fd(a)
-    lt(90)
-    fd(4 * a)
-    lt(90)
-    fd(a)
-    lt(90)
-    fd(4 * a)
-    end_fill()
-
+    kolor_ksiązki("yellowgreen",4*a)
 
 def czerwona():
-    setheading(0)
-    fillcolor("red")
-    begin_fill()
-    fd(a)
-    lt(90)
-    fd(3 * a)
-    lt(90)
-    fd(a)
-    lt(90)
-    fd(3 * a)
-    end_fill()
+    kolor_ksiązki("red",3*a)
 
+def kolor_ksiązki(kol, wys):
+    fillcolor(kol)
+    begin_fill()
+    for i in range(2):
+        fd(a)
+        lt(90)
+        fd(wys)
+        lt(90)
+    end_fill()
 
 def książka():
     księga = [niebieska, zielona, czerwona]
@@ -141,6 +119,7 @@ def półka(szer):
 
 
 speed(0)
-regał(200, 6)
+reg(600, 6)
+setpos(0, 0)
 
 done()

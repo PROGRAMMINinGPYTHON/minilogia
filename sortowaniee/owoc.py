@@ -21,9 +21,10 @@ def dojscie():
     rt(60)
     fd(a)
 
+
 def marihuaina():
     pu()
-    setpos(0,200)
+    setpos(0, 200)
     dojscie()
     pd()
     for i in range(5):
@@ -38,7 +39,7 @@ def zielone_romby():
         pu()
         setpos(0, 200)
         dojscie()
-        setheading(210-60 + 30 * i)
+        setheading(210 - 60 + 30 * i)
         fd(a)
         lt(30)
         fd(a)
@@ -52,17 +53,16 @@ def zielone_romby():
 def zolte_kwadraty():
     for i in range(3):
         pu()
-        setpos(0,200)
+        setpos(0, 200)
         dojscie()
-        setheading(210-60+30*i)
+        setheading(210 - 60 + 30 * i)
         fd(a)
         for i in range(2):
             lt(30)
             fd(a)
         lt(120)
         pd()
-        czworokąt(90,90,"yellow")
-
+        czworokąt(90, 90, "yellow")
 
 
 def pomaranczowe_romby():
@@ -71,26 +71,31 @@ def pomaranczowe_romby():
         setpos(0, 200)
 
         dojscie()
-        setheading(210-60+30*i)
+        setheading(210 - 60 + 30 * i)
         for i in range(4):
             fd(a)
             lt(30)
         lt(60)
         pd()
-        czworokąt(60,120,"orange")
+        czworokąt(60, 120, "orange")
         pu()
+
 
 def czerwony_romb():
     rt(60)
     pd()
-    czworokąt(150,30,"red")
+    czworokąt(150, 30, "red")
 
-speed(0)
-marihuaina()
-zielone_romby()
-zolte_kwadraty()
-pomaranczowe_romby()
-czerwony_romb()
+
+def owoc():
+    marihuaina()
+    zielone_romby()
+    zolte_kwadraty()
+    pomaranczowe_romby()
+    czerwony_romb()
+
+
+owoc()
 pu()
 
 done()
