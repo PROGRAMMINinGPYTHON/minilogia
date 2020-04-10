@@ -1,1 +1,95 @@
-from turle import *
+from turtle import *
+
+def organy(ile):
+    piszczałka_lewa(ile)
+    piszczałka_prawa(ile)
+    wykonczenie(ile)
+
+def wykonczenie(ile):
+    pass
+
+
+def pasek(ile,jak_długi):
+    fillcolor("orange")
+    begin_fill()
+    a = 10
+    for i in range(2):
+        fd(jak_długi)
+        lt(90)
+        fd(a)
+        lt(90)
+    end_fill()
+
+def kwadrat(ile):
+    a =10
+    color("orange")
+    fillcolor("orange")
+    begin_fill()
+    for i in range(4):
+        fd(a)
+        lt(90)
+    end_fill()
+
+def piszczałka_prawa(ile):
+    a = 10
+    color("orange")
+    wys = 410-40-(30*ile)
+    for i in range(ile):
+        setheading(90)
+        pasek(ile,wys+30*i)
+        setheading(0)
+        kwadrat(ile)
+        fd(a)
+        lt(90)
+        fd(wys+30*i)
+        setheading(180)
+        kwadrat(ile)
+        setheading(0)
+        rt(90)
+        pasek(ile,wys+30*i)
+        setheading(0)
+        fd(a)
+        rt(90)
+        fd(wys+30*i)
+        lt(90)
+        fd(2*a)
+        lt(90)
+
+def lewa_str(ile):
+    color("orange")
+    a = 10
+    setpos(-2*a, -205)
+    wys = 410-40-(30*ile)+30
+    for i in range(ile-1):
+        setheading(90)
+        pasek(ile,wys+30*i)
+        lt(90)
+        fd(2*a)
+        rt(90)
+        pasek(ile,wys+30*i)
+        fd(wys+30*i-a)
+        rt(90)
+        kwadrat(ile)
+        rt(90)
+        fd(wys+30*i-a)
+        rt(90)
+        fd(3*a)
+        stopy()
+def stopy():
+    a = 10
+    fillcolor("orange")
+    begin_fill()
+    fd(a)
+    rt(90)
+    fd(a)
+    rt(90)
+    fd(2*a)
+    rt(90)
+    fd(a)
+    end_fill()
+speed(0)
+setpos(0,-205)
+piszczałka_prawa(3)
+lewa_str(3)
+
+done()
