@@ -23,32 +23,68 @@ def literka_T():
     end_fill()
     lt(90)
 
-def rządek_literek(ile_T,ile,x):
-    for i in range(ile+(ile-1)):
-        if i == ile+1:
-            break
-        rt(180)
-        pd()
-        literka_T()
-        pu()
-        setheading(x)
-        fd(2*a)
-        if i %2 == 0:
-            rt(90)
-            fd(2*a)
-            lt(270)
-        else:
-            fd(2*a)
-            lt(90)
-            fd(2*a)
-            rt(90)
-    rt(180)
-    fd((ile-1)*2*3*a)
-    fd(4*a)
-    literka_T()
 def tetki(ile):
     pass
 
-rządek_literek(4
-               ,4,0)
+def rządek(ile, poczatkowy_kąt):
+    setheading(poczatkowy_kąt)
+    for i in range((ile*2)-1):
+        if i %2  == 1:
+            setheading(90+poczatkowy_kąt)
+            fd(2*a)
+            setheading(0+poczatkowy_kąt)
+        else:
+            setheading(-90+poczatkowy_kąt)
+            fd(2*a)
+        setheading(0+poczatkowy_kąt)
+        rt(180*(i%2))
+        literka_T()
+        setheading(0+poczatkowy_kąt)
+        if i %2 == 0:
+            fd(4*a)
+        else:
+            fd(2*a)
+
+        rt(180)
+    fd(1*a)
+
+def tetki_dla_jeden():
+    for i in range(2):
+        pd()
+        literka_T()
+        rt(90)
+        fd(a)
+        lt(90)
+        fd(a)
+        rt(180)
+    for i in range(2):
+        fd(a)
+        rt(90)
+        literka_T()
+        fd(a)
+        rt(90)
+    lt(135)
+    pu()
+    fd(4*a*math.sqrt(2))
+speed(0)
+
+
+def ramka(ile):
+    for i in range(4):
+        rządek(ile, -90 * i)
+    setheading(180)
+    # fd(2*a)
+    # rt(45)
+    setheading(180)
+    fd(2*a)
+    rt(45)
+    fd(1*a*math.sqrt(2))
+    setheading(90)
+    fd(2*a)
+
+ramka(1)
+
+ramka(2`)
+
+
 done()
