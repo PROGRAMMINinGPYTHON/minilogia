@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+</head>
+<body>
+<table border="1" widt="40%">
+    {% for p in products %}
+        <tr>
+            <td>{{ p .id }}</td>
+            <td>{{ p.name }}</td>
+            <td><a href="showProduct?id={{ p.id }}">Pokaż</a></td>
+        </tr>
+
+    {% endfor %}
+</table>
+
+</body>
+</html>

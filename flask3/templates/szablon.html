@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1>NEWS</h1>
+    <p>people </p>
+    <ul>
+       {% for k in nameA %}
+        <li>{{ k }}</li>
+        {% endfor %}
+<h2>the most popular names :{{ nameA }}</h2>
+    <ol> {% for k in nameA %}
+        <li>{{ k }}</li>
+        {% endfor %}</ol>
+<p>The same text in others forms</p>
+        </ul>
+    <h2>lucky number :{{ numberA }}</h2>
+    <h2>unlucky number : {{ numberB }}</h2>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
