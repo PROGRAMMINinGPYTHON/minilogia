@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 import PhonesDataSource as mds
 
 app = Flask(__name__)
@@ -19,7 +19,11 @@ def phones():
         print("p: ", p.nr)
     return render_template("phones.html",phones=mds.getAll())
 
-
+@app.route("/showPhones")
+def showPhones():
+    nr = request.args.get('nr')
+    print(f'odczytanie nr={id}')
+    return render_template("showPhones.html")
 
 if __name__ == '__main__':
     app.run(debug=True,port=8080)
