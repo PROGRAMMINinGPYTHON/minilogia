@@ -95,5 +95,5 @@ def pas(ile_segmentów,jak_duze):
 
 speed(0)
 rt(30)
-pas(9,9)
+pas(1,1)
 done()

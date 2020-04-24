@@ -14,7 +14,9 @@ def kafelek(ile):
     setheading(45)
     fd(b)
     setheading(0)
+
     background_red(ile)
+
     lt(45)
     fd(długosc*2*math.sqrt(2)-b-3)
     lt(135)
@@ -133,5 +135,5 @@ def background_red(ile):
 
 speed(0)
 setpos(-480/2,-480/2)
-kratka(2)
+kratka(1)
 done()
