@@ -84,7 +84,8 @@ def ramka(ile):
 
 ramka(1)
 
-ramka(2`)
+ramka(2)
+ramka(3)
 
 
 done()

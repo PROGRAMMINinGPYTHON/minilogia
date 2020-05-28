@@ -1,7 +1,28 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,session
 import PhonesDataSource as mds
 
 app = Flask(__name__)
+app.config['SECRET_KET']='mypassword'
+
+@app.route("/addPhone")
+def addPhone():
+    return render_template("addPhone.html")
+
+@app.route("/addPhone",methods=['POST'])
+def addPhonePost():
+    name = request.form['nazwa']
+    price= request.form['opis']
+    print(f"name={name},opis = {price}")
+    return render_template("addPhone.html")
+
+@app.route("/testSession")
+def testSession():
+    print("umieszczanie usera w sesji")
+    session['loggedUser']="ThePaniHalynaKsiegowa"
+    print("user zalogowany to "+session['loggedUser'])
+    return"";
+
+
 
 @app.route('/')
 def hello_phones():
@@ -22,8 +43,9 @@ def phones():
 @app.route("/showPhones")
 def showPhones():
     nr = request.args.get('nr')
-    print(f'odczytanie nr={id}')
-    return render_template("showPhones.html")
+    p = mds.getOne(nr)
+    print(f'odczytanie nr={nr}')
+    return render_template("showPhones.html",phone=p)
 
 if __name__ == '__main__':
     app.run(debug=True,port=8080)

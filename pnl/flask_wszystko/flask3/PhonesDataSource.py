@@ -1,8 +1,8 @@
 class Phone:
-    def __init__(self,nr,name,prince):
+    def __init__(self,nr,name,price):
         self.nr = nr
         self.name= name
-        self.prince = prince
+        self.price = price
 
 dane=[
     Phone(1,"Xiaomi","cheap"),
