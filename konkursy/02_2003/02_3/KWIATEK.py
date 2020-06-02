@@ -11,4 +11,4 @@ def KWIATEK(ile):
             rt(180)
             rt(360/ile/20)
 speed(0)
-platek(3)
+KWIATEK(3)

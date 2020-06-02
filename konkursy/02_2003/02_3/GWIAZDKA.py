@@ -12,5 +12,5 @@ def gwiazda():
     rt(150)
     fd(2*a)
 
-
+speed(1)
 gwiazda()
