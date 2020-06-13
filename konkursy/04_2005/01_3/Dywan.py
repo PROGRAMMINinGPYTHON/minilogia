@@ -3,29 +3,23 @@ import math
 global a
 a = 10
 def dywanik(szer,wys):
+    print("szer: ", szer)
     if szer%2 == 1:
         szer = szer+1
-    if szer == 1:
-        kawałek()
-        fd(8*a)
-        lt(90)
-        fd(16*a)
+    print("szer: ", szer)
+
     for i in range(wys):
         rządek(szer)
         przejscie(szer,i)
         print(szer)
-    wykonczenie(szer,wys)
+    #wykonczenie(szer,wys)
 
 def DYWAN(szer,wys):
     pu()
     setpos(-300,-300)
     pd
-    if szer == 1:
-        dywanik(2,wys)
-        wykonczenie(1,wys)
-    else:
-        dywanik(szer,wys)
-        wykonczenie(szer,wys)
+    dywanik(szer,wys)
+    wykonczenie(szer,wys)
 
 
 def wykonczenie(szer,wys):
@@ -131,8 +125,7 @@ def rządek(szer):
 
 
 speed(0)
-DYWAN(9,6
-      )
+DYWAN(3,3)
 
 pd()
 done()

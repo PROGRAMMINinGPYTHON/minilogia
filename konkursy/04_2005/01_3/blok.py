@@ -5,6 +5,7 @@ import math
 global a
 a = 20
 def BLOK(klatki,wys):
+
     ustawienie_się(klatki,wys)
     for i in range(klatki):
         klatka(wys)
@@ -95,6 +96,6 @@ def kwadrat_z_oknem():
     lt(45)
 
 speed(0)
-BLOK(1,1)
+BLOK(1,12)
 setpos(0,0)
 done()

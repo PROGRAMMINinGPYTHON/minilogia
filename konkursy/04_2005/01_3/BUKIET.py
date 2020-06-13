@@ -1,6 +1,6 @@
 from turtle import *
 global a
-a = 20
+a = 40
 
 def płatek(kol):
     fillcolor(kol)

@@ -54,7 +54,7 @@ def przejscie():
     fd(a)
 
 speed(0)
-PĘCZEK(1,4)
+PĘCZEK(6,12)
 setpos(0,0)
 color("black")
 done()

@@ -78,8 +78,6 @@ def przejscie(b, i):
 
 
 def cały_kwadrat(b):
-    #b = szerokosc_obrazka / (ile + 1) / 2
-    #a = b / math.sqrt(2)
     for i in range(4):
         rządek(b)
         przejscie(b, i)
@@ -110,7 +108,7 @@ def STRZAŁKI(ile):
 
 
 speed(0)
-STRZAŁKI(2)
+STRZAŁKI(1)
 pu()
 setpos(0,0)
 pd()
