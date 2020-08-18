@@ -1,9 +1,91 @@
 from turtle import *
+import math
 
 
 def KWADRATY(n):
-    pass
+    a = 480 / (n * 2 + 3 + 4)
+    czarna_siatka_full(n)
+    zielone_1(n)
+    czerwone_2(n)
+    zielone_2(n)
+    czerwone_1(n)
 
+
+def przejscie_x(n,i):
+    pu()
+    setpos(0, 0)
+    setheading(135 + 90 * i)
+
+def czerwone_1(n):
+    a = 480 / (n * 2 + 3 + 4)
+    for i in range(4):
+        przejscie_x(n,i)
+        fd(480/2*math.sqrt(2))
+        rt(135)
+        fd(a)
+        rt(90)
+        fd(2*a)
+        pd()
+        piramida(n,"red")
+
+def zielone_2(n):
+    a = 480 / (n * 2 + 3 + 4)
+    for i in range(4):
+        pu()
+        setpos(0, 0)
+        setheading(45 - 90 * i)
+        fd(480 / 2 * math.sqrt(2))
+        rt(180)
+        fd(480 / 4 * math.sqrt(2))
+        fd(a / 4 * math.sqrt(2))
+        lt(45)
+        fd((n + 1) / 2 * a)
+        fd(a / 2)
+        rt(90)
+        fd((n / 2) * a)
+        rt(180)
+        pd()
+        fd(n*a+a)
+        lt(90)
+        fd(a)
+        piramida(n, "yellowgreen")
+
+
+def zielone_1(n):
+    a = 480 / (n * 2 + 3 + 4)
+    for i in range(4):
+        przejscie_x(n, i)
+        fd(480 / 2 * math.sqrt(2))
+        rt(135)
+        fd(a)
+        rt(90)
+        fd(2 * a)
+        fd(n*a+a)
+        lt(90)
+        fd(a)
+        pd()
+        piramida(n, "yellowgreen")
+
+
+def czerwone_2(n):
+    a = 480 / (n * 2 + 3 + 4)
+    for i in range(4):
+        pu()
+        setpos(0,0)
+        setheading(45-90*i)
+        fd(480/2*math.sqrt(2))
+        rt(180)
+        fd(480/4*math.sqrt(2))
+        fd(a/4*math.sqrt(2))
+        lt(45)
+        fd((n+1)/2*a)
+        fd(a/2)
+        rt(90)
+        fd((n/2)*a)
+        rt(180)
+        pd()
+        print(heading())
+        piramida(n,"red")
 
 def kwadrat(n, kolor):
     a = 480 / (n * 2 + 3 + 4)
@@ -83,24 +165,9 @@ def piramida(n, kolor):
         rządek(n, n - 2 * i, kolor)
         przejscie(n, i)
 
-###################################################do poprawy!
-
-def kwadracik(n):
-    a = 480 / (n * 2 + 3 + 4)
-    setpos(0,0)
-    for i in range(4):
-        fd(a+n*a)
-        rt(180)
-        piramida(n,"red")
-        setpos(0,0)
-        for j in range(i):
-            fd(n*a+2*a)
-            rt(90)
-
-
 
 
 
 speed(0)
-kwadracik(9)
+KWADRATY(3)
 done()

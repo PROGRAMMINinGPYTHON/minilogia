@@ -83,5 +83,5 @@ def PIRAMIDA(ile):
 
 
 speed(0)
-PIRAMIDA(20)
+PIRAMIDA(2)
 done()
