@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kod="hax"
+kod="bas"
 
 for file in $kod/in/*in
 do
