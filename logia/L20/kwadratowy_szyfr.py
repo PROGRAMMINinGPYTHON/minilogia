@@ -1,0 +1,1 @@
+def rysuj_literkę(jaka_literka)
