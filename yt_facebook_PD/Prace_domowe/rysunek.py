@@ -1,0 +1,2 @@
+def rysunek():
+    print()
