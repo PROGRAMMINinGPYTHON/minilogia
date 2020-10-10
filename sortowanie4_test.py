@@ -1,4 +1,4 @@
-from bombelkow.py import *
+from srt import *
 
 def test_sortowanie():
     tab = [3, 1]
