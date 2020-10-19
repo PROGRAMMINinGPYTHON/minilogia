@@ -54,7 +54,7 @@ speed(0)
 koduj("abcdefghi")
 #koduj("ablmnopyz")
 #koduj("abcdefghijklmnopqrstuwxyzabcdefghijklm")
-koduj("a")
+koduj("abbbbbbbbbbbbbbbb")
 
 done()
 
