@@ -63,6 +63,4 @@ def trojkat(kolor, bok):
     end_fill()
 
 
-speed(0)
 wiatrak()
-done()

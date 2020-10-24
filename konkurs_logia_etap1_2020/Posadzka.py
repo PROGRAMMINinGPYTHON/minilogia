@@ -52,6 +52,4 @@ def kwadrat_duzy():
         fd(a)
         lt(60)
 
-speed(0)
 posadzka(6)
-done()
