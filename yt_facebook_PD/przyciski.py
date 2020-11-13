@@ -1,4 +1,11 @@
-def wczytanie_tych_przyciskow_ktore_beda_wcisniete():
+def wczytanie_drugiej_lini():
+    b = input()
+    b = list(b)
+    for i in range(0,len(b),2):
+        b[i] = int(b[i])
+    print(b)
+
+def wczytanie_pierwszej_lini():
     pass
 
 
@@ -20,4 +27,4 @@ def dodawanie_przyciskow(pierwsza_linia, tab_z_przyciskami, tab_licznenie):
         pass
 
 
-znajdz_idx_najw_wartosci([3, 7, 6, 1])
+wczytanie_drugiej_lini()
