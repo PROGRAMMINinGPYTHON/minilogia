@@ -1,12 +1,11 @@
 from turtle import *
-import math
 
 def gwiazdy(k):
-    o = 560/len(k)
-    rzadek(k,o)
+    o = 560 / len(k)
+    rzadek(k, o)
     for i in range(3):
-        for p in range(len(k)-i):
-            rzadek(k,0)
+        for p in range(len(k) - i):
+            rzadek(k, 0)
 
 
 def gwiazda_klasyczna(kolor, a):
@@ -67,43 +66,43 @@ def rzadek(j, g):
     x = [lambda: gwiazda_klasyczna("green", g)
         , lambda: gwiazda_z_dziorka("green", g)
         , lambda: gwiazda_klasyczna("red", g),
-         lambda:gwiazda_z_dziorka("red",g),
-         lambda:gwiazda_klasyczna("green",g),
-         lambda:gwiazda_z_dziorka("green",g),
-         lambda:gwiazda_klasyczna("red",g),
-         lambda:gwiazda_z_dziorka("red",g),
-         lambda:gwiazda_klasyczna("green",g),
-         lambda:gwiazda_z_dziorka("green",g)
+         lambda: gwiazda_z_dziorka("red", g),
+         # lambda: gwiazda_klasyczna("green", g),
+         # lambda: gwiazda_z_dziorka("green", g),
+         # lambda: gwiazda_klasyczna("red", g),
+         # lambda: gwiazda_z_dziorka("red", g),
+         # lambda: gwiazda_klasyczna("green", g),
+         # lambda: gwiazda_z_dziorka("green", g)
          ]
     pu()
 
-    setpos(-560/2,0)
-    g = 560/len(j)/3
+    setpos(-560 / 2, 0)
+    g = 560 / len(j) / 3
     setheading(60)
-    fd(5*g)
+    fd(5 * g)
     setheading(-180)
-    fd(3*g)
+    fd(2.5 * g)
     pd()
     for q in range(3):
-        for i in range(len(j)-q):
-            x[int(j[i])]()
+        for i in range(len(j) - q):
+            x[int(j[i])%4]()
             przejscie(g)
         rt(180)
         pu()
-        fd(3*g*(len(j)-1-q))
+        fd(3 * g * (len(j) - 1 - q))
         lt(60)
         fd(g)
         lt(60)
-        fd(3*g)
+        fd(3 * g)
         rt(120)
-        fd(1*g)
+        fd(1 * g)
         rt(180)
         pd()
 
 
-
 speed(0)
-rzadek(11357,20)
+rzadek(2490, 20)
+setpos(-560/2,0)
+setheading(0)
+fd(560)
 done()
-a = 10
-

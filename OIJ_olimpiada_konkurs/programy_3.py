@@ -10,20 +10,21 @@ def programy(ilosc_prog, tab_programow, ile_plyt, tab_plyt):
     # print("prog ", tab_programow, " plyt ", tab_plyt)
     for i in range(len(tab_programow)):
         k = 0
-        for j in range(len(tab_plyt)):
-            if tab_programow[i] <= tab_plyt[j]:
+        j = 0
+        if tab_programow[i]<tab_plyt[j]:
+            lcz = lcz+1
+            tab_plyt.pop(j)
+
+        while tab_programow[i]<= tab_plyt[j]:
                 lcz = lcz + 1
                 tab_plyt.pop(j)
                 break
-            else:
-                print(lcz)
-                tab_plyt.pop(j)
 
-    print(lcz)
+    # print(lcz)
     return lcz
 
 
-programy(input(),input().split(),input(), input().split())
+# print(programy(input(),input().split(),input(), input().split()))
 
 
 testy = [
@@ -32,17 +33,16 @@ testy = [
     [["1", "9", "9", "9", "9"], ["1", "1", "1", "1", "1"], 1],
     [["8", "1", "4"], ["5", "5", "4", "4", "6"], 2],
     [["2", "3", "4"], ["1", "2", "3"], 2],
-    [["0", "0"], ["1", "1"], 2]
+    [["0", "0"], ["1", "1"], 2],
+    [["0", "0"], ["1", "1"], 6]
 
 ]
 
 
 def testowanie():
     for test in testy:
-        print("testuje dla programy: ", test[0], ", plyty: ", test[1], "otrzymany wynik",
-              programy(len(test[0]), test[0].copy(), len(test[1]), test[1].copy()), "oczekiwany wynik", test[2])
-        assert programy(len(test[0]), test[0], len(test[1]), test[1]) == test[2]
-        print("OK")
+        msg = " dla " + " ".join(test[0]) + ", plyty: " + " ".join(test[1]) + " otrzymany wynik" + str(programy(len(test[0]), test[0].copy(), len(test[1]), test[1].copy())) + " oczekiwany wynik" + str(test[2])
+        assert programy(len(test[0]), test[0], len(test[1]), test[1]) == test[2], f"blad {msg}"
 
 
-# testowanie()
+testowanie()
