@@ -28,5 +28,5 @@ def koduj(napis):
         pd()
 
 speed(0)
-koduj("fghjastuz")
+koduj("abcdefghijklmnopqrstuwxyz")
 done()
