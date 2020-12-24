@@ -10,6 +10,11 @@ def tyrolka():
         a[j][1] = int(a[j][1])
     najm = [9999999,x,y]
     obl = 2000000000000000000000
+
+
+
+
+    print(a)
     for r in range(n):
         for g in range(n - 1):
             if a[r][1] > a[g][1]:
