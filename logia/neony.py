@@ -10,3 +10,10 @@ def neon(a):
         print(max[0],max[1])
 neon([9,8,0,1,10,0,11])
 
+testy = [
+    [],
+
+
+]
+def testowanie():
+    pass
