@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="suiteux.js"></script>
+</head>
+<body>
+    <script type="text/javascript" nonce="Zaef91J4lE2SafC6bwjrEpneh0TDO7LHOziGyLoTip0=">
+        
+                var requestExecutorSettings = {
+                    originAuthorityValidator: O365SuiteServiceProxy.ServiceHandlers.validateOrigin,
+                    trustedOriginAuthorities: ["\u005E.\u002A\\.officeapps\\.live\\.com\u0024"],
+                    allowedEndpoints: [{host: "^webshell\\.suite\\.office\\.com$",paths: ["^api/(.*?)"]},{host: "^ocws\\.officeapps\\.live\\.com$",paths: ["^ocs/(.*?)"]},{host: "^graph\\.microsoft\\.com$",paths: ["^v1\\.0/(.*?)"]},{host: "^management\\.azure\\.com$",paths: ["^providers/Microsoft.BusinessAppDiscovery/(.*?)"]},{host: "^outlook\\.office\\.com$",paths: ["^/calendar/opxdeeplink/myday$"]}],
+                    allowedResources: [{resource: "api.office.net",hosts: ["ocws.officeapps.live.com"]},{resource: "graph.microsoft.com",hosts: ["graph.microsoft.com"]},{resource: "webshell.suite.office.com",hosts: ["webshell.suite.office.com"]},{resource: "management.azure.com",hosts: ["management.azure.com"]},{resource: "outlook.office.com",hosts: ["outlook.office.com"]}],
+                    shouldAttachOauthTokens: true,
+                    trustedOriginAuthoritiesSetFromServer: true
+                };
+
+                O365SuiteServiceProxy.RequestExecutorMessageProcessor.init(requestExecutorSettings);
+
+                var tokenFactorySettings = {
+                    clientId: "89bee1f7-5e6e-4d8a-9f3d-ecd601259da7",
+                    instance: "https\u003A//login.microsoftonline.com/",
+                    tenant: 'common',
+                    cacheLocation: "sessionStorage",
+                    clientShellServiceOrigin: "https\u003A//webshell.suite.office.com",
+                    parentPageOrigin: "https\u003A//euc-powerpoint.officeapps.live.com",
+                    shsid: "6ad845a1-ec21-4c24-97b2-d5cffd7b2a32",
+                    upn: "stanislaw.sitek\u0040nasza.szkola.fnrr.pl"
+                };
+
+                O365TokenFactoryIframe.TokenFactoryInsideIframe.init(tokenFactorySettings);
+    </script>
+
+</body></html>
