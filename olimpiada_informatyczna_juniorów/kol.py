@@ -1,10 +1,5 @@
-
-
-def mozna_przyjac_rezerwacje(od, do, ile_rezerwacji, tab, liczba_miejsc_w_pociagu):
-    return True
-
-
 def pociag():
+    wyniki = []
     q = input()
     q = q.split()
     for m in range(3):
@@ -26,17 +21,22 @@ def pociag():
         # sprawdzenie czy mozemy przyjac rezerwacje
 
         for k in range(a[0], a[1]):
-            if tab[k] > ile_miejsc:
+            if tab[k] + a[2] > ile_miejsc:
                 czy_ok = False
                 break
 
         if czy_ok:
-            print("T")
+            # print("T")
+            wyniki.append("T")
             # TODO przyjmij zgloszenie
             for c in range(a[0], a[1]):
                 tab[c] += a[2]
         else:
-            print("N")
+            # print("N")
+            wyniki.append("N")
+
+    print('\n'.join(wyniki))
+    print()
 
 
 pociag()

@@ -1,15 +1,15 @@
 #!/bin/bash
 
-kod="bas"
+kod="kol"
 
 for file in $kod/in/*in
 do
   bname=$(basename $file)
 #  echo $file
   solution="$kod/out/${bname%.*}.out"
-#  echo "testing $file $solution"
+  echo "testing $file $solution"
 #  echo $solution
-  cat $file | python3 "$kod.py" > out.txt
+  time cat $file | python3 "$kod.py" > out.txt
   diff out.txt $solution &>/dev/null
   error=$?
 #  echo "err " $error
